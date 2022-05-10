@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Layout</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </header>
+    <header>
+        <h1 class="banner"></h1>
+    </header>
+    {% block content %}
+    
+    {% endblock %}
+    <footer>
+        <ul class="myFoot">
+            <li id="left"><a href="">&copy; Class Project | Renee Banton </a></li>
+            <li><a href="">LinkedIn</a></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Twitter</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

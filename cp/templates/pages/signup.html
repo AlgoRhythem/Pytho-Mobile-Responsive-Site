@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <main>
+        <h1>Signup</h1>
+        {{ Name }}
+        <!-- Call cross site request forgery: csrf - used to avoid malicous attacks and call our form variable: -->
+        <form class="signupForm" action="/signup" method="post"> <!--post method is more secure than get method-->
+            {% csrf_token %}
+            {{ signupForm }}
+            <!-- {{ signupForm.fname }} can put these in a p tag and style the p tag for our form and delete the inline styles from the forms.py design-->
+            <input cl class="submit" type="submit" value="SIGN UP">
+        </form> 
+        {{ errorM }}
+    </main>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main>
+    <h1>Profile</h1>
+    <h4>User name: {{ name }}</h4>
+    <!-- Session variable: direct method -->
+    <h2>First name: <span style="color: goldenrod;">{{request.session.firstName}}</span></h2>
+    <!-- Session variable: normal method -->
+    <h3>Last name: <span style="color: goldenrod;">{{ ssnLastName }}</span></h3>
+    <!-- Logout button must delet the session variables and redirect the user to the login page when pressed -->
+    <button class="logout" type="submit"><a href="/logout" style="color: goldenrod">Logout</a></button>
+</main>
+{% endblock %}

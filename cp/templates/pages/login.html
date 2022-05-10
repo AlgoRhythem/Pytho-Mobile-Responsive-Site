@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main>
+    <h1>Login</h1>
+    <h3 style="color: red;">{{ error }}</h3>
+    <h3 style="color: red;">{{ errorL }}</h3>
+    
+    <form class="signupForm" action="/login" method="post"> <!--post method is more secure than get method-->
+        {% csrf_token %}
+
+        <!-- This is the variable name in our render request in our login function: 'userLogin': formL-->
+        {{ userLogin }}
+        <!-- {{ signupForm.fname }} can put these in a p tag and style the p tag for our form and delete the inline styles from the forms.py design-->
+        <input cl class="submit" type="submit" value="LOGIN">
+    </form>
+</main>
+{% endblock %}

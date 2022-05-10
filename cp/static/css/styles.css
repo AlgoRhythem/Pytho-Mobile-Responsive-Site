@@ -1,0 +1,199 @@
+body{
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(3, 17, 94);
+  }
+  
+li {
+  float: left;
+  border-right:1px solid #bbb;
+  color: aliceblue;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(41, 185, 178, 0.432);
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+a{
+  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+#left{
+    float: right;
+}
+
+.myFoot {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(3, 17, 94);
+  border-radius: 0px;
+}
+
+.container{
+    display: flex;
+    margin-top: 10%;
+}
+
+.container div{
+    background-color: rgba(227, 241, 253, 0.432);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 20px;
+    width: 100%;
+    height: 450px;
+}
+
+h1.image{
+    text-align: center;
+    height: 150px; 
+    text-shadow: 5px 5px 10px rgb(42, 39, 44);
+    color: goldenrod;
+}
+
+h1{
+  text-align: center;
+  margin: 0%;
+  border-radius: 10px;
+  color: goldenrod;
+}
+
+h3{
+  color: black;
+}
+
+i{
+  color: goldenrod;
+  font-size: 100px;
+  
+}
+
+span{
+  color: black;
+}
+
+.image{
+  background-image: url('../img/classBG.jpg'); 
+  height: 150px; 
+  text-shadow: 5px 5px 10px rgb(42, 39, 44);
+}
+
+.hero{
+  padding: 15px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.banner{
+  background-image: url('../img/classBG.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  border-radius: 0px;
+  border-bottom-style: groove;
+  border-bottom-width: 10px;
+  border-bottom-color: #5204aa;
+  font-size: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rahim's Design for 3 containers */
+main{
+  text-align: center;
+  font-size: xx-large;
+  color: black;
+}
+
+main section{
+  width: 25%;
+  height: 75vh;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  background-color: rgba(137, 43, 226, 0.486);
+  border-radius: 25px;
+}
+
+.mid{
+  background-image:url('../img/average.jpg');
+  background-size: contain;
+  color: goldenrod;
+  box-shadow: 5px 5px 20px rgb(38, 36, 43);
+}
+
+.submit{
+border-radius: 10px;
+height: auto;
+padding: 5px;
+width: 50%;
+margin: 15px auto;
+background-color: goldenrod;
+color: black;
+font-size: 25px;
+font-weight: bold;
+}
+
+.signupForm{
+display: grid;
+margin: auto;
+width: 300px;
+margin-top: 20px;
+font-size: 25px;
+text-align: left;
+border-radius: 15px;
+background-color: #5204aa;
+padding: 25px;
+color: aliceblue;
+}
+
+.logout{
+  display: grid;
+  margin: auto;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #5204aa;
+  color: goldenrod;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+  
