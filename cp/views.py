@@ -1,8 +1,10 @@
+from unicodedata import name
 from django.shortcuts import redirect, render
-#Import the 'signupForm' form:
-from .forms import loginForm, signupForm
-#Import the 'user' model:
+#Import the forms:
+from .forms import loginForm, signupForm, contactForm
+#Import the models:
 from .models import user
+from .models import contact
 #Import serializer:
 from django.core import serializers
 #Import JSON:
@@ -11,9 +13,6 @@ import json
 #Import server:
 '''from django.http import HttpResponse''' #Don't need this right now
 
-#Import our signupForm class from our forms file:
-from .forms import signupForm
-
 # Create your views here (by creating a function that will display the page).
 def index(request):
     return render(request, 'pages/index.html')
@@ -21,8 +20,25 @@ def index(request):
 def about(request):
     return render(request, 'pages/about.html')
 
-def contact(request):
-    return render(request, 'pages/contact.html')
+def contactPage(request):
+    if request.method == 'POST':
+        #create variable for the form:
+        contact_form = contactForm(request.POST)
+        if contact_form.is_valid():
+            #create variables to store user input:
+            userName = contact_form.cleaned_data['name']
+            userEmail = contact_form.cleaned_data['email']
+            userSubject = contact_form.cleaned_data['subject']
+            userMessage = contact_form.cleaned_data['message']
+            #insert the data into our 'contact' database from our model:
+            contact_data = contact(dbname = userName, dbemail = userEmail, dbsubject = userSubject, dbmessage = userMessage)
+            contact_data.save()
+            success_message = 'Your message has been sent!'
+            contactF = contactForm()
+            return render(request, 'pages/contact.html', {'contactForm': contactF, 'successMessage': success_message})
+    else:
+        contactF = contactForm()
+        return render(request, 'pages/contact.html', {'contactForm': contactF})
 
 def services(request):
     return render(request, 'pages/services.html')

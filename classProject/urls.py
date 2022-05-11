@@ -24,7 +24,7 @@ urlpatterns = [
     #add a new path for your view:
     path('',views.index, name='index'),
     path('about',views.about, name='about'),
-    path('contact',views.contact, name='contact'),
+    path('contact',views.contactPage, name='contact'),
     path('services',views.services, name='services'),
     path('profile',views.profile, name='profile'),
     path('signup',views.signup, name='signup'),

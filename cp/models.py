@@ -9,3 +9,11 @@ class user(models.Model):
 
     def __str__(self):
         return self.dbfname + " " + self.dblname
+class contact(models.Model):
+    dbname = models.CharField(max_length=50)
+    dbemail = models.CharField(max_length=100)
+    dbsubject = models.CharField(max_length=50)
+    dbmessage = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.dbname + " " + self.dbsubject

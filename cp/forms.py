@@ -1,4 +1,5 @@
 #Import what you need:
+from email import message
 from django import forms
 
 #Create our 'form' class:
@@ -12,4 +13,9 @@ class signupForm(forms.Form):
 class loginForm(forms.Form):
     email = forms.CharField(max_length=100, label='enter your email', widget=forms.EmailInput(attrs={'placeholder': 'enter email address', 'style': 'height: 25px; border-radius: 5px; background-color: aliceblue;'}))
     password = forms.CharField(max_length=100, label='enter your password', widget=forms.PasswordInput(attrs={'placeholder': 'enter a password', 'style': 'height: 25px; border-radius: 5px; background-color: aliceblue;'}))
-    
+
+class contactForm(forms.Form):
+    name = forms.CharField(max_length=50, label='Name:')
+    email = forms.CharField(max_length=50, label='Email:')
+    subject = forms.CharField(max_length=50, label='Subject:')
+    message = forms.CharField(max_length=500, label='Message:')
