@@ -1,6 +1,6 @@
 from operator import concat
 from django.contrib import admin
-#import the 'user' model:
+#import the models:
 from .models import user, contact
 
 # Register your models here.
