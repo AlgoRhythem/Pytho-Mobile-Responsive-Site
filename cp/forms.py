@@ -18,4 +18,4 @@ class contactForm(forms.Form):
     name = forms.CharField(max_length=50, label='Name:')
     email = forms.CharField(max_length=50, label='Email:')
     subject = forms.CharField(max_length=50, label='Subject:')
-    message = forms.CharField(max_length=500, label='Message:')
+    message = forms.CharField(max_length=500, label='Message:', widget=forms.TextInput(attrs={'style': 'height: 100px; border-radius: 5px; background-color: aliceblue;'}))
